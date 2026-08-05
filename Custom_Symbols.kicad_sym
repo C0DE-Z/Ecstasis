@@ -1,0 +1,213 @@
+(kicad_symbol_lib
+	(version 20231120)
+	(generator "kicad_symbol_editor")
+	(generator_version "9.0")
+	(symbol "SW_3PDT_Footswitch"
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "SW"
+			(at 0 12.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_3PDT_Footswitch"
+			(at 0 -12.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom_Footprints:SW_3PDT_Footswitch_9Pin_Custom"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Triple Pole Double Throw (3PDT) mechanical stomp footswitch for guitar pedal true-bypass switching. 9 pins in 3x3 grid. Units: Pole1 (Audio In), Pole2 (Audio Out/LED), Pole3 (LED Switch)."
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "switch 3PDT triple-pole double-throw stomp footswitch guitar pedal bypass"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_fp_filters" "SW_3PDT*"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+
+		(symbol "SW_3PDT_Footswitch_0_0"
+			(circle
+				(center -2.032 0)
+				(radius 0.508)
+				(stroke (width 0) (type default))
+				(fill (type none))
+			)
+			(circle
+				(center 2.032 -2.54)
+				(radius 0.508)
+				(stroke (width 0) (type default))
+				(fill (type none))
+			)
+			(circle
+				(center 2.032 2.54)
+				(radius 0.508)
+				(stroke (width 0) (type default))
+				(fill (type none))
+			)
+		)
+
+		(symbol "SW_3PDT_Footswitch_0_1"
+			(rectangle
+				(start -3.175 3.81)
+				(end 3.175 -3.81)
+				(stroke (width 0.254) (type default))
+				(fill (type background))
+			)
+			(polyline
+				(pts
+					(xy -1.524 0.254) (xy 1.5748 2.286)
+				)
+				(stroke (width 0) (type default))
+				(fill (type none))
+			)
+		)
+
+		(symbol "SW_3PDT_Footswitch_1_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "COM1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "4"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 5.08 2.54 180)
+				(length 2.54)
+				(name "A1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "1"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 5.08 -2.54 180)
+				(length 2.54)
+				(name "B1"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "7"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+		)
+
+		(symbol "SW_3PDT_Footswitch_2_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "COM2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "5"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 5.08 2.54 180)
+				(length 2.54)
+				(name "A2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "2"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 5.08 -2.54 180)
+				(length 2.54)
+				(name "B2"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "8"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+		)
+
+		(symbol "SW_3PDT_Footswitch_3_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "COM3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "6"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 5.08 2.54 180)
+				(length 2.54)
+				(name "A3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "3"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+			(pin passive line
+				(at 5.08 -2.54 180)
+				(length 2.54)
+				(name "B3"
+					(effects (font (size 1.27 1.27)))
+				)
+				(number "9"
+					(effects (font (size 1.27 1.27)))
+				)
+			)
+		)
+
+		(embedded_fonts no)
+	)
+)
