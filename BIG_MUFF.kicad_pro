@@ -501,7 +501,7 @@
       "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "BIG_MUFF.dsn",
-      "step": "BIG_MUFF.stl",
+      "step": "../../../../../Downloads/BIG_MUFF.stl",
       "svg": "",
       "vrml": ""
     },

@@ -1,0 +1,32 @@
+Item,Category,Designators,Qty,Value / Part Name,Package / Footprint,Recommended Part / Sourcing,Est. Cost ($)
+1,Potentiometer,R5,1,100k Linear (B100K),Alpha 9mm Vertical (RD901F),Alpha RD901F-40-15R1-B100K,1.00
+2,Potentiometer,R23,1,100k Log/Linear (A100K/B100K),Alpha 9mm Vertical (RD901F),Alpha RD901F-40-15R1-B100K (Volume),1.00
+3,Potentiometer,R26,1,100k Linear (B100K),Alpha 9mm Vertical (RD901F),Alpha RD901F-40-15R1-B100K (Tone),1.00
+4,Footswitch,SW6,1,3PDT Stomp Switch,Custom 9-Pin 4.7mm Pitch THT,Standard Blue 3PDT 9-pin Latching Switch,3.00
+5,Audio Jack,J2,1,"1/4"" Mono Jack (IN)",Neutrik NMJ4HCD2 Custom (1.5mm drill),Neutrik / Rean NMJ4HCD2,1.50
+6,Audio Jack,J3,1,"1/4"" Mono Jack (OUT)",Neutrik NMJ4HCD2 Custom (1.5mm drill),Neutrik / Rean NMJ4HCD2,1.50
+7,DC Jack,J1,1,2.1mm DC Power Jack,Barrel Jack Horizontal THT,2.1mm x 5.5mm PCB Barrel Jack,0.50
+8,Battery,BT1,1,9V Battery Snap,Wire Pads 4.8mm Pitch,Heavy Duty 9V Battery Snap Clip,0.40
+9,Reed Switch,"SW4, SW5",2,14mm Reed Switch,SW_Reed_14mm_Custom (20mm pitch),Standex KSK-1A80-1015 / KSK 14mm,1.20
+10,Pin Headers,"J4, J5",2,1x3 Header / Socket,2.54mm Pitch 1x3 THT,Standard 2.54mm 1x3 Pin Header / Socket,0.20
+11,Transistor,"Q1, Q2, Q3, Q4",4,NPN Transistor,TO-92 Inline THT,BC547B / 2N5088 / NOS Russian KT3102E,0.60
+12,Diode,"D3, D4, D5, D6",4,1N914 / 1N4148,DO-35 Axial THT,1N914 or 1N4148 Silicon Diode,0.20
+13,Diode,D1,1,1N5817,DO-41 Axial THT,1N5817 Schottky Protection Diode,0.10
+14,LED,D2,1,3mm / 5mm Red LED,LED_D3.0mm THT,Standard 3mm Red LED,0.15
+15,Fuse,F1,1,Polyfuse 100mA,Radial THT (MF-RHT100),Bourns MF-RHT100 PTC Resettable Fuse,0.25
+16,Resistor,"R2, R9, R17",3,390 Ω,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.15
+17,Resistor,R6,1,1 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.05
+18,Resistor,R7,1,1.5 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.05
+19,Resistor,R21,1,2.7 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.05
+20,Resistor,"R12, R18, R22",3,10 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.15
+21,Resistor,"R4, R11, R14",3,12 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.15
+22,Resistor,"R24, R25",2,22 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.10
+23,Resistor,R13,1,39 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.05
+24,Resistor,"R1, R8, R15, R20",4,100 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.20
+25,Resistor,"R3, R10, R16, R19",4,470 kΩ,Axial DIN0207 (7.62mm pitch),1/4W 1% Metal Film / Carbon Film,0.20
+26,Capacitor,"C1, C4, C8",3,500 pF,Ceramic Disc 2.5mm Pitch,500pF 50V Ceramic Disc (or Silver Mica),0.30
+27,Capacitor,C13,1,0.0039 µF (3.9nF),Box Film 5.0mm Pitch,3.9nF 63V/100V PET Film (Panasonic/WIMA),0.25
+28,Capacitor,C14,1,0.01 µF (10nF),Box Film 5.0mm Pitch,10nF 63V/100V PET Film (Panasonic/WIMA),0.20
+29,Capacitor,"C7, C9",2,0.047 µF (47nF),Box Film 5.0mm Pitch,47nF 63V/100V PET Film (Panasonic/WIMA),0.40
+30,Capacitor,"C3, C5, C6, C10, C11, C12",6,0.1 µF (100nF),Box Film 5.0mm Pitch,100nF 63V/100V PET Film (Panasonic/WIMA),1.20
+31,Capacitor,C2,1,22 µF 16V+,Radial Electrolytic 2.0mm Pitch,22uF 25V Radial Electrolytic (Nichicon/Panasonic),0.15
