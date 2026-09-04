@@ -16,7 +16,7 @@ A faithful recreation of the **Electro-Harmonix Big Muff Pi V7**, built from the
 
 The enclosure was designed specifically for Ecstasis and can be recreated from the included CAD files.
 
-**[Check out the CAD files for the case →](./CAD)**
+**[Check out the CAD files for the case →](https://cad.onshape.com/documents/4a616b34c8cebf5af5db81c0/w/c1b61d61beab4ab555bac2e2/e/5e637b2c9b2abae1699ef9a3?renderMode=0&uiState=6a9b2af46ffce9c59fbfa45d)**
 
 ### Why Ecstasis?
 
