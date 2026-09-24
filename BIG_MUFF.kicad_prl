@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 19,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_netclasses": [],
@@ -50,7 +50,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffffff_fffffffb",
+    "visible_layers": "ffffffff_ffffffff_ffffffff_ffffff5b",
     "zone_display_mode": 0
   },
   "git": {
@@ -91,12 +91,12 @@
     "col_widths": [
       162,
       147,
-      91,
-      67,
-      91,
-      91,
-      91,
-      71,
+      113,
+      92,
+      98,
+      115,
+      100,
+      98,
       91,
       91
     ],
@@ -117,27 +117,15 @@
   "project": {
     "files": [
       {
-        "name": "BIG_MUFF.kicad_sch",
-        "open": false,
-        "window": {
-          "display": 0,
-          "maximized": true,
-          "pos_x": -8,
-          "pos_y": -8,
-          "size_x": 1936,
-          "size_y": 1048
-        }
-      },
-      {
         "name": "BIG_MUFF.kicad_pcb",
         "open": false,
         "window": {
           "display": 0,
           "maximized": true,
-          "pos_x": -8,
-          "pos_y": -8,
-          "size_x": 1936,
-          "size_y": 1048
+          "pos_x": -11,
+          "pos_y": -11,
+          "size_x": 2582,
+          "size_y": 1550
         }
       }
     ]
