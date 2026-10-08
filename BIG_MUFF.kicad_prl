@@ -115,20 +115,7 @@
   },
   "open_jobsets": [],
   "project": {
-    "files": [
-      {
-        "name": "BIG_MUFF.kicad_pcb",
-        "open": false,
-        "window": {
-          "display": 0,
-          "maximized": true,
-          "pos_x": -11,
-          "pos_y": -11,
-          "size_x": 2582,
-          "size_y": 1550
-        }
-      }
-    ]
+    "files": []
   },
   "schematic": {
     "hierarchy_collapsed": [],

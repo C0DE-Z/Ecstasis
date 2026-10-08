@@ -1,0 +1,107 @@
+* Ecstasis / Big Muff V7.1 audio-path simulation
+* Derived from BIG_MUFF.kicad_sch; power switching, LED, jacks, and 3PDT
+* bypass wiring are intentionally omitted.  Use ngspice (batch mode):
+*   ngspice -b BIG_MUFF_audio.cir
+*
+* Potentiometer positions are 0..1.  Endpoint resistances are kept at 0.1%
+* of the track value so all positions remain numerically well behaved.
+
+.title Ecstasis Big Muff audio path
+
+.param SUSTAIN=0.65
+.param TONE=0.50
+.param VOLUME=0.75
+.param INPUT_PEAK=25m
+
+VCC vcc 0 DC 9
+V_GTR src 0 DC 0 AC 1 SIN(0 {INPUT_PEAK} 1k)
+R_SOURCE src in_jack 10k
+
+* Input and first common-emitter gain stage (Q4)
+R13 in_jack n_input 39k
+C6 n_input q4_b 100n
+R1 q4_b 0 100k
+R2 q4_e 0 390
+R3 q4_b q4_c 470k
+R4 vcc q4_c 12k
+C1 q4_b q4_c 500p
+Q4 q4_c q4_b q4_e BC547B
+C3 q4_c sustain_in 100n
+
+* Sustain control and second clipping/gain stage (Q3)
+R5A sustain_in stage2_in {100000*max(0.001,1-SUSTAIN)}
+R5B stage2_in sustain_low {100000*max(0.001,SUSTAIN)}
+R6 sustain_low 0 1k
+R12 stage2_in n_q3_in 10k
+C5 n_q3_in q3_b 100n
+R8 q3_b 0 100k
+R9 q3_e 0 390
+R10 q3_b q3_c 470k
+R11 vcc q3_c 12k
+C4 q3_b q3_c 500p
+D3 q3_c q3_b D914
+D4 q3_b q3_c D914
+Q2 q3_c q3_b q3_e BC547B
+C7 q3_c stage3_in 47n
+
+* Third clipping/gain stage (Q2)
+R18 stage3_in n_q2_in 10k
+C10 n_q2_in q2_b 100n
+R15 q2_b 0 100k
+R17 q2_e 0 390
+R16 q2_b q2_c 470k
+R14 vcc q2_c 12k
+C8 q2_b q2_c 500p
+D5 q2_b q2_c D914
+D6 q2_c q2_b D914
+Q3 q2_c q2_b q2_e BC547B
+C9 q2_c tone_in 47n
+
+* Passive tone network, recovery stage (Q1), and volume control
+R25 tone_in tone_lo 22k
+C14 tone_lo 0 10n
+C13 tone_in tone_hi 3.9n
+R24 tone_hi 0 22k
+R26A tone_hi recovery_in {100000*max(0.001,1-TONE)}
+R26B recovery_in tone_lo {100000*max(0.001,TONE)}
+C11 recovery_in q1_b 100n
+R20 q1_b 0 100k
+R21 q1_e 0 2.7k
+R19 q1_b q1_c 470k
+R22 vcc q1_c 10k
+Q1 q1_c q1_b q1_e BC547B
+C12 q1_c volume_in 100n
+R23A volume_in fx_out {100000*max(0.001,1-VOLUME)}
+R23B fx_out 0 {100000*max(0.001,VOLUME)}
+R_LOAD fx_out 0 1Meg
+
+* Typical generic BC547B model; actual transistor gain varies by device.
+.model BC547B NPN(IS=2.39e-14 NF=1.008 ISE=3.545e-15 NE=1.541
++ BF=294.3 IKF=0.135 VAF=63.2 NR=1.004 ISC=6.272e-14 NC=1.243
++ BR=7.946 IKR=0.135 VAR=25 RB=10 RC=1 RE=0.5
++ CJC=4.277e-12 MJC=0.3416 VJC=0.75 CJE=1.5e-11 MJE=0.377
++ VJE=0.75 TF=4.34e-10 TR=1e-8)
+.model D914 D(IS=2.52n RS=0.568 N=1.752 CJO=4p M=0.333 VJ=0.75 TT=4n)
+
+.options reltol=1e-4 abstol=1e-12 rshunt=1e12
+
+.control
+set wr_singlescale
+set wr_vecnames
+ac dec 60 20 20k
+let gain_db = db(v(fx_out)/v(in_jack))
+let system_gain_db = db(v(fx_out)/v(src))
+let q4_gain_db = db(v(q4_c)/v(in_jack))
+let q3_gain_db = db(v(q3_c)/v(q3_b))
+let q2_gain_db = db(v(q2_c)/v(q2_b))
+let tone_gain_db = db(v(recovery_in)/v(tone_in))
+let q1_gain_db = db(v(q1_c)/v(recovery_in))
+let output_gain_db = db(v(fx_out)/v(q1_c))
+wrdata BIG_MUFF_ac.csv vdb(fx_out) vp(fx_out) gain_db system_gain_db
+wrdata BIG_MUFF_stages.csv q4_gain_db q3_gain_db q2_gain_db tone_gain_db q1_gain_db output_gain_db
+wrdata BIG_MUFF_nodes.csv vdb(in_jack) vdb(q4_c) vdb(q3_b) vdb(q3_c) vdb(q2_b) vdb(q2_c) vdb(tone_in) vdb(recovery_in) vdb(q1_c) vdb(fx_out)
+tran 10u 50m
+wrdata BIG_MUFF_transient.csv v(src) v(in_jack) v(fx_out) v(q3_c) v(q3_b) v(q2_c) v(q2_b)
+.endc
+
+.end
